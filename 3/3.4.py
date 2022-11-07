@@ -9,9 +9,12 @@
 
 # Дальше случился ступор, как без использование  if  и счетчика посчитать сколько каких чисел.
 # Наведи пожалуйста на верное решение
-first = input()
-second = input()
-third = input()
-summ = first + second + third
-print('Число отрицательных чисел: ', summ.count('-'))
-print('Число положительных чисел: ', (3 - summ.count('-')))
+first = int(input())
+second = int(input())
+third = int(input())
+# summ = first + second + third
+# print('Число отрицательных чисел: ', summ.count('-'))
+# print('Число положительных чисел: ', (3 - summ.count('-')))
+
+print('Положительные: ', (first > 0) + (second > 0) + (third > 0))
+print('Отрицательные: ', (first < 0) + (second < 0) + (third < 0))

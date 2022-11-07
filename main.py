@@ -4,6 +4,7 @@
 # print("hello python")
 # print("hello dear")
 
-s = input().upper()
-word = input().upper()
-print(s == word)
+x = int(input())
+y = int(input())
+print(f'Точка({x = } , {y = })')
+
