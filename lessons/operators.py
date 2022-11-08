@@ -51,10 +51,19 @@ numbers = [2, 5, 3, 6, 9, 5 ]
 #     print(i, val)
 
 # вводится текст
-text = input('текст: ').split()
-for i in text:
-    if len(i) > 5:
-        print(i)
+# text = input('текст: ').split()
+# for i in text:
+#     if len(i) > 5:
+#         print(i)
+#
+# for i in input('текст: ').split():
+#     if len(i) > 5:
+#         print(i)
+
+text = input('data: ')
+while not text.isdigit():
+    text = input('data: ')
+
 
 
 
