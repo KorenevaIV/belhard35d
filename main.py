@@ -17,11 +17,11 @@
 #     print('word')
 # else:
 #     print('not word')
-word = input()
-if word.isdigit():
-    word = int(word)
-    print('digit')
-elif word.isalpha():
-    print('word')
+# word = input()
+# if word.isdigit():
+#     word = int(word)
+#     print('digit')
+# elif word.isalpha():
+#     print('word')
 
 
