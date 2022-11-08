@@ -17,5 +17,5 @@ if word.isalpha():
     print('word')
 else:
     print('not word')
-
+m
 
