@@ -64,6 +64,8 @@ text = input('data: ')
 while not text.isdigit():
     text = input('data: ')
 
+while not(number := input('Enter data: ')).isdigit():
+    pass
 
 
 
