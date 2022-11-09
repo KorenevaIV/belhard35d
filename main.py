@@ -26,8 +26,26 @@
 #
 # a = list(map(int, input().split()))
 # print(f'{777 in a}')
+#
+# if (number := int(input('Введите число: '))) < 10000:
+#     print(f'Сумма {number} не превышает лимит, проходите')
+# else:
+#     print(f'Ого! {number}! Куда вам столько? Мы заберем {number - 10000}')
 
-if (number := int(input('Введите число: '))) < 10000:
-    print(f'Сумма {number} не превышает лимит, проходите')
-else:
-    print(f'Ого! {number}! Куда вам столько? Мы заберем {number - 10000}')
+# if 'walrus' in (word := input()):
+#     print('Нашли моржа')
+# else:
+#     print('Никаких моржей тут нет')
+
+# На вход программе поступает целое число
+# Ваша задача сохранить в переменную text  строку Even, если введенное число четное, иначе сохраните строку Odd
+# В качестве ответа необходимо вывести переменную text
+# Sample Input 1:
+# 8
+# Sample Output 1:
+# Even
+num = int(input())
+text = 'Even' if num % 2 else '0dd'
+print(text)
+
+
