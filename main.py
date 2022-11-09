@@ -23,5 +23,11 @@
 #     print('digit')
 # elif word.isalpha():
 #     print('word')
+#
+# a = list(map(int, input().split()))
+# print(f'{777 in a}')
 
-
+if (number := int(input('Введите число: '))) < 10000:
+    print(f'Сумма {number} не превышает лимит, проходите')
+else:
+    print(f'Ого! {number}! Куда вам столько? Мы заберем {number - 10000}')
