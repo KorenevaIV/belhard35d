@@ -44,8 +44,18 @@
 # 8
 # Sample Output 1:
 # Even
-num = int(input())
-text = 'Even' if num % 2 else '0dd'
-print(text)
+# num = int(input())
+# text = 'Even' if num % 2 == 0 else 'Odd'
+# print(text)
 
 
+#На вход вашей программе поступает два неравных друг друг целых числа в отдельных строках
+# Ваша задача сохранить наименьшее из этих чисел в переменную  minimum, а наибольшее - в maximum
+# Использовать нужно, конечно же, тернарный оператор
+# В качестве ответа выведите через пробел сперва minimum , а потом maximum
+
+num1 = int(input())
+num2 = int(input())
+maximum = num2 if num1 < num2 else num1
+minimum = num1 if num1 < num2 else num2
+print(minimum, maximum)
