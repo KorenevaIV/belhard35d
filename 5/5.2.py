@@ -14,3 +14,5 @@ elif text == '**':
     print(first_num**second_num)
 else:
     print('crazy choice')
+
+
