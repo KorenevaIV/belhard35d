@@ -6,8 +6,8 @@ k = int(input())  # и больше этого числа
 lst = []
 c = 0
 i = 0
-while c<n:
-    if i%3 == 0 and i>k:
+while c < n:
+    if (i % m == 0) and i > k:
         lst.append(i)
         c += 1
     i += 1
