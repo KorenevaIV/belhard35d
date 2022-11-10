@@ -8,7 +8,7 @@
 
 
 n = int(input())
-a = [i for i in range(2, n+1,2)]
+a = [i for i in range(2, n+1, 2)]
 while len(a) > 0:
     print(a[0:5])
     del a[0:5]
