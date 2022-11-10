@@ -5,9 +5,9 @@ k = int(input())  # и больше этого числа
 
 lst = []
 c = 0
-i = 0
+i = k
 while c < n:
-    if (i % m == 0) and i > k:
+    if (i % m == 0):
         lst.append(i)
         c += 1
     i += 1
