@@ -115,5 +115,36 @@
 #         print('Босс качалки')
 #     case _:
 #         print('Неизвестный курс')
-
+# первый вариант:
+#
+# n = int(input())
+# i = 1
+# while i <= n:
+#     if n % i == 0:
+#         print(i, end=' ')
+#     i+=1
+#
+# второй вариант:
+#
+# n = int(input())
+# i = 1
+# while i <= n//2:
+#     if n % i == 0:
+#         print(i, end=' ')
+#     i+=1
+# print(n)
+#
+# третий вариант:
+#
+# n = int(input())
+# i = 1
+# a = []
+# while i ** 2 <= n:
+#     if n % i == 0:
+#         a.append(i)
+#         if i != n // i:
+#             a.append(n // i)
+#     i += 1
+# a.sort()
+# print(a)
 
