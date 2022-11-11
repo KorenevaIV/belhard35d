@@ -8,7 +8,15 @@
 
 
 n = int(input())
-a = [i for i in range(2, n+1, 2)]
-while len(a) > 0:
-    print(a[0:5])
-    del a[0:5]
+# a = [i for i in range(2, n+1, 2)]
+# while len(a) > 0:
+#     print(a[0:5])
+#     del a[0:5]
+
+for i in range (2, n+1, 10):
+    for j in range(i, i+9, 2):
+        if j <=n:
+            print((j, end=' '))
+        else:
+            break
+    print()
