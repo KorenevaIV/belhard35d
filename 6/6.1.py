@@ -21,4 +21,4 @@ def bin_to_dec(s):
     for i in range(0, dlina):
         chislo_dec = chislo_dec + int(s[i]) * (2 ** (dlina - i - 1))
     return chislo_dec
-print(chislo_dec)
+print(bin_to_dec(s))
