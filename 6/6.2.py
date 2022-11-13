@@ -20,11 +20,15 @@ def Morse(s):
     return a
 
 
+a = 'THello world how are you'
+print(Morse(a))
+
+
+#как назад вернуть в текст
 def get_key(val, morze):  # Функция возвращает ключ словаря по значению
     for key, value in morze.items():
         if val == value:
             return key
-
 
 def MorseTxt(s):
     a, s = '', s.split()
@@ -35,7 +39,5 @@ def MorseTxt(s):
             a += ' '
     return a
 
-
-a = 'The quick brown fox jumps over the lazy dog'
-print(Morse(a))
 print(MorseTxt(Morse(a)))
+
