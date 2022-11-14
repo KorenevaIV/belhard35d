@@ -11,8 +11,7 @@ def binnum(n):
 n = int(input())
 if n != 0:
     print(binnum(n))
-binlist = int(binnum(n))
-print(binlist)
+
 
 def bin_to_dec(n):
     dlina = len(n)
@@ -20,17 +19,11 @@ def bin_to_dec(n):
     for i in range(0, dlina):
         chislo_dec = chislo_dec + int(n[i]) * (2 ** (dlina - i - 1))
     return chislo_dec
-print(bin_to_dec(binlist))
+print(bin_to_dec(binnum(n)))
 
 
 
 
 
 
-#
-# def bin_dec(data):
-#     number = 0
-#     len_dat = len(data)
-#     for i in range(0, len_dat):
-#         number += int(data[i]) * (2**(len_dat - i -1))
-#     return number
+
