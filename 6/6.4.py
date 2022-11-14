@@ -2,12 +2,12 @@
 # образом, чтобы остались только строки, использование дополнительного списка
 # незаконно
 
-list = ['a','b','c', 5, 7, 'g', 8, 'a']
 
-# for i in list:
-#     if type(i) != str:
-#         list.remove(i)
-# print(list)
+numbers = ['a','b','c', 5, 7, 'g', 8, 'a']
+# numbers = list(map(filter(lambda x: isinstance(x, str), numbers)))
+numbers = [i for i in numbers if isinstance(i, str)]
+#
+#
+print(numbers)
 
-new_list = ', '.join(filter(lambda s: str(s) in list, list))
-print(new_list)
+
