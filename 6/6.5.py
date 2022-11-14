@@ -2,16 +2,22 @@
 # функции reversed, а так же дополнительного списка и среза
 
 numbers = [1, 2, 3, 4, 5]
-# for i in range(0, len(list1)):
-#     num = list1.pop(-1)
-#     print(num, end=' ')
 
 
-def newlist(text):
-    output = []
-    for i in range(len(text)-1, -1, -1):
-        output.append(text[i])
-    return output
+# def newlist(text):
+#     output = []
+#     for i in range(len(text)-1, -1, -1):
+#         output.append(text[i])
+#     return output
+#
+#
+# print(newlist(numbers))
 
+def newlist(num):
+    if len(num) == 0:
+        print('')
+    else:
+        print(num[-1], end=' ')
+        newlist(num[:-1])
 
-print(newlist(numbers))
+newlist(numbers)
