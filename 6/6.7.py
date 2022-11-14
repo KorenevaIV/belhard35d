@@ -4,18 +4,15 @@
 
 nums = [1, 4, 6, 9, 15, 77, 32, 90, 101, 53, 86, 1, 4, 15]
 
-
-def take_num():
-    for i in nums:
-        yield i
-
-
-a = take_num(nums)
-list = []
-for i in a:
-    if i %2 == 0:
-        list.insert(0, i)
-    else:
-        list.append(i)
-
-
+list = []       #14 индексов от 0 до 13
+for i in range(len(nums)):
+    if i == 0:
+        m = nums[-1] + nums[1]
+        list.append(m)
+    elif i > 0 and i < len(nums)-1:
+        m = nums[i-1] + nums[i+1]
+        list.append(m)
+    elif i == len(nums)-1:
+        m = nums[len(nums)-2] + nums[0]
+        list.append(m)
+print(list)
