@@ -26,3 +26,18 @@
 #
 #
 # bar(1234)
+
+vklad = int(input())
+procent = int(input())
+# ставка рефинансирования б через сколько увеличится в два раза
+
+def summa_v_god(vklad, procent):
+    years = 0
+    sum_za_2 = vklad*2
+    while vklad <= sum_za_2:
+
+        vklad += vklad * (procent/100)
+        years += 1
+    return years
+print(summa_v_god(vklad, procent))
+
