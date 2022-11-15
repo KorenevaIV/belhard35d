@@ -1,18 +1,31 @@
 # Дан список чисел, необходимо его развернуть без использования метода revese и
 # функции reversed, а так же дополнительного списка и среза
 
-numbers = [1, 2, 3, 4, 5]
+numbers = [1, 2, 3, 4, 5, 6, 7]
 
 
-def newlist(text):
-    output = []
-    for i in range(len(text)-1, -1, -1):
-        output.append(text[i])
-    return output
+def my_reversed(lst):
+    for i in range(len(lst) // 2):
+        j = len(lst) - 1 - i  # индекс элемента с противоположной стороны
+        lst[i], lst[j] = lst[j], lst[i]
+        # lst[i], lst[~i] = lst[~i], lst[i]
+    return lst
 
 
-print(newlist(numbers))
+print(my_reversed(numbers))
 #
+# numbers = [1, 2, 3, 4, 5]
+#
+#
+# def newlist(text):
+#     output = []
+#     for i in range(len(text)-1, -1, -1):
+#         output.append(text[i])
+#     return output
+#
+#
+# print(newlist(numbers))
+# #
 # def newlist(num):
 #     if len(num) == 0:
 #         print('')
