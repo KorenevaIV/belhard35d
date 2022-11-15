@@ -6,7 +6,6 @@
 persons = {1 : {'name':'Ivan',
                 'surname': 'Ivanov',
                 'tel': 123456,
-                'email': 'iidogcat@mail.ru'
                 },
            2 : {'name': 'Petr',
                 'surname': 'Petrov',
@@ -22,7 +21,8 @@ persons = {1 : {'name':'Ivan',
 a = persons.keys()
 
 for i in a:
-    print(persons[i].get('email'))
+
+
 
 
 

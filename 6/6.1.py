@@ -12,14 +12,31 @@ n = int(input())
 if n != 0:
     print(binnum(n))
 
+def binary_to_decimal(binary):
+    decimal = 0
+    for i in binary[::-1]:
+        decimal += int(i)
+        decimal *= 2
+    return decimal
 
-def bin_to_dec(n):
-    dlina = len(n)
-    chislo_dec = 0
-    for i in range(0, dlina):
-        chislo_dec = chislo_dec + int(n[i]) * (2 ** (dlina - i - 1))
-    return chislo_dec
-print(bin_to_dec(binnum(n)))
+def binary_to_dec2(binary):
+    decimal = 0
+    binary = binary[::-1]
+    for i range(len(binary)):
+        if binary[i] == '1':
+            drcimal += ** i
+    return decimal
+
+
+
+#
+# def bin_to_dec(n):
+#     dlina = len(n)
+#     chislo_dec = 0
+#     for i in range(0, dlina):
+#         chislo_dec = chislo_dec + int(n[i]) * (2 ** (dlina - i - 1))
+#     return chislo_dec
+# print(bin_to_dec(binnum(n)))
 
 
 
