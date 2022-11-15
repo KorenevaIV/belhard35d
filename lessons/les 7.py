@@ -31,15 +31,19 @@ vklad = int(input())
 procent = int(input())
 # ставка рефинансирования б через сколько увеличится в два раза
 
-def summa_v_god(vklad, procent):
+def calculate_deposit(vklad: float | int, procent: float | int, k: float | int) -> int:
     years = 0
-    sum_za_2 = vklad*2
+    sum_za_2 = vklad*k
     procent /= 100
     while vklad <= sum_za_2:
         vklad += vklad * procent
-        vklad = round(vklad,2)
+        vklad = round(vklad, 2)
         years += 1
         print(f'{years=} {vklad=}')
     return years
-print(summa_v_god(vklad, procent))
+print(calculate_deposit(
+    float(input('deposit: ')),
+    float(input('percent: ')),
+    float(input('k: ')))
+)
 
