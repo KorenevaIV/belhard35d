@@ -34,10 +34,12 @@ procent = int(input())
 def summa_v_god(vklad, procent):
     years = 0
     sum_za_2 = vklad*2
+    procent /= 100
     while vklad <= sum_za_2:
-
-        vklad += vklad * (procent/100)
+        vklad += vklad * procent
+        vklad = round(vklad,2)
         years += 1
+        print(f'{years=} {vklad=}')
     return years
 print(summa_v_god(vklad, procent))
 
