@@ -47,7 +47,7 @@ procent = int(input())
 #     float(input('k: ')))
 # )
 
-C2H5OH -> {'C':2, 'H': 6, 'O': 1}
+# C2H5OH -> {'C':2, 'H': 6, 'O': 1}
 # C2H5OH -> {'C': 2, 'H': 6, 'O': 1}
 # H2O -> {'H': 2, 'O': 1}
 
@@ -69,5 +69,6 @@ for i in range(len(formula)):
             else:
                 data[formula[i]] = 1
 print(data)
+
 
 
