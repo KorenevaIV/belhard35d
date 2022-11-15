@@ -24,11 +24,11 @@ def binary_to_dec2(binary):
     binary = binary[::-1]
     for i range(len(binary)):
         if binary[i] == '1':
-            drcimal += ** i
+            drcimal += 2 ** i
     return decimal
 
 
-
+print(binary_to_decimal2(decimal_to_binary(decimal=18)))
 #
 # def bin_to_dec(n):
 #     dlina = len(n)
