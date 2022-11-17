@@ -3,3 +3,13 @@
 # сумму в копейках, необходимо рассчитать сколько минимальное количество монет
 # номиналом 1/5/10/25 необходимо чтобы составить данную сумму. Прим. 66 = 25 + 25 + 10 + 5
 # + 1 ответ 5 монет
+total_sum=int(input())
+coins=0
+coins+=total_sum//25
+total_sum%=25
+coins+=total_sum//10
+total_sum%=10
+coins+=total_sum//5
+total_sum%=5
+coins+=total_sum
+print(coins)
