@@ -6,26 +6,21 @@
 # *учесть, что координаты на плоскости могут быть отрицательными
 class Rectangle:
 
-    def __init__(self, coord: (int, int), coord2:(int, int)):
+    def __init__(self, coord: (int, int, a: int, b: int):
         self.coord = coord
-        self.coord2 = coord2
+        self.width = b
+        self.lenth = a
 
 
-    def get_length(self, ):
-        return self.a
-
-    def get_width(self):
-        return self.b
 
     def perimeter(self):
-        return 2 * (self.a + self.b)
+        return 2 * (self.length + self.width)
 
     def square(self):
-        return self.a * self.b
+        return self.length * self.width
 
 
-rect = Rectangle(3, 4)
-print(rect.get_length())
-print(rect.get_width())
+rect = Rectangle()
+
 print(rect.square())
 print(rect.perimeter())
