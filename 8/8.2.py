@@ -8,8 +8,6 @@ class Rectangle:
 
     def __init__(self, coord: (int, int, a: int, b: int):
         self.coord = coord
-        self.width = b
-        self.lenth = a
 
 
 
