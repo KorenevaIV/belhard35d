@@ -6,8 +6,11 @@
 # *учесть, что координаты на плоскости могут быть отрицательными
 class Rectangle:
 
-    def __init__(self, coord: (int, int, a: int, b: int):
-        self.coord = coord
+    def __init__(self, x, y, width, length):
+        self.x = x
+        self.y = y
+        self.width = width
+        self.length = length
 
 
 
