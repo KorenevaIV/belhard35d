@@ -17,10 +17,11 @@ user = Student('Alex', 45, [1, 2, 3])
 user2 = Student('Eva', 44, [4, 5, 6])
 user3 = Student('Ivan', 45, [5, 4, 3])
 stud = [user, user3, user2]
-
+print(user3)
 
 def student_sort(students) -> list:
-    sorted(students, key = lambda student: student.first_name)
+    return sorted(students, key = lambda student: student.first_name)
 
 
-print(student_sort())
+print(student_sort(stud))
+
