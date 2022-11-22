@@ -16,10 +16,10 @@ class Numbers:
         return sum(self.numbers) / len(self.numbers)
 
 
-    def max_count(self, numbers) -> int | float:
+    def max_count(self) -> int | float:
         from collections import Counter
         numbers_counter = Counter(self.numbers)
-        max_cout_number = numbers_counter.most_common(1)[0][1]
+        max_count_number = numbers_counter.most_common(1)[0][1]
         numbers = []
         for key, val in numbers_counter.items():
             if val == max_count_number:
