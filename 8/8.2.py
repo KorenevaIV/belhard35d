@@ -13,7 +13,6 @@ class Rectangle:
         self.length = length
 
 
-
     def perimeter(self):
         return 2 * (self.length + self.width)
 
