@@ -4,19 +4,30 @@
 # Написать метод max_count — возвращающий число из списка, которое чаще встречается,
 # если таких чисел несколько, вывести среднее арифметическое среди таких чисел
 
-from collections import Counter
+
 
 class Numbers:
 
-    def __init__(self, numbers: list[int]):
+    def __init__(self, numbers: list[int]) -> None:
         self.numbers = numbers
 
 
-    def average(self, numbers):
-        average_sum = sum(numbers) / len(numbers)
-        return average_sum
+    def average(self, numbers) -> float:
+        return sum(self.numbers) / len(self.numbers)
 
-    def max_count(self, numbers):
-        dict_new = dict(Counter(numbers))
+
+    def max_count(self, numbers) -> int | float:
+        from collections import Counter
+        numbers_counter = Counter(self.numbers)
+        max_cout_number = numbers_counter.most_common(1)[0][1]
+        numbers = []
+        for key, val in numbers_counter.items():
+            if val == max_count_number:
+                numbers.append(key)
+        return sum(numbers) / len(numbers)
+
+numbers = [1, 3, 5, 5, 23, 2, 45, 2, 5, 2, 4, 12, 34]
+numbers = Numbers(numbers=numbers)
+print(numbers.max_count())
 
 
