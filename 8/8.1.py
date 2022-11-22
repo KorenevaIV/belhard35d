@@ -19,9 +19,6 @@ user3 = Student('Ivan', 45, [5, 4, 3])
 students = [user, user3, user2]
 
 
-# def student_sort(students) -> list:
-#     return sorted(students, key = lambda student: student.first_name)
-
 def student_sort(students: list[Student]) -> list[Student]:
     return sorted(students, key=lambda student: student.first_name)
 
