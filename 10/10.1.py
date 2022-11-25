@@ -41,10 +41,7 @@ class Taxi:
             if self.count_passengers_seats == count_passengers and self.is_baby_seats == is_baby:
                 return list[self.cars]
             else:
-                return self.is_busy =True
-
-
-
+                return self.is_busy = True
 
 
 
