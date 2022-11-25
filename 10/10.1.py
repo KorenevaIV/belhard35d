@@ -37,7 +37,7 @@ class Taxi:
         self.cars = cars
 
     def find_car(self, count_passengers: int, is_baby: bool):
-        for self.cars in list[Car]:
+        for key in self.cars:
             if self.count_passengers_seats == count_passengers and self.is_baby_seats == is_baby:
                 return list[self.cars]
             else:
