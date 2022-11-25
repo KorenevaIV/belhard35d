@@ -92,11 +92,11 @@ import json
 # }
 # '''
 # with open('users.json', 'r', encoding='utf-8') as file:
-#     data = json.load(file)
-# print(data)
-data = {
-    'first_name': 'алекс',
-    'last_name': 'попов'
-}
-with open('alex.json', 'w', encoding='utf-8') as file:
-    json.dump(data, file, indent=2, ensure_ascii=False)
+# #     data = json.load(file)
+# # print(data)
+# data = {
+#     'first_name': 'алекс',
+#     'last_name': 'попов'
+# }
+# with open('alex.json', 'w', encoding='utf-8') as file:
+#     json.dump(data, file, indent=2, ensure_ascii=False)
