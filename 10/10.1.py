@@ -36,9 +36,12 @@ class Taxi:
     def __init__(self, cars: list[Car]) -> None:
         self.cars = cars
 
-    def find_car(self, count_passengers_seats: int, is_baby_seat: bool):
-        for available_cars in list[Car]:
-            if available_cars
+    def find_car(self, count_passengers: int, is_baby: bool):
+        for self.cars in list[Car]:
+            if self.count_passengers_seats == count_passengers and self.is_baby_seats == is_baby:
+                return list[self.cars]
+            else:
+                return self.is_busy =True
 
 
 
