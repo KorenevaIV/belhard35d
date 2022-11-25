@@ -19,7 +19,8 @@ class Car:
 
     def __str__(self):
         return f'''Color: {self.color}. There are {self.count_passenger_seats} seats. 
-        Seats for baby {self.is_baby_seat}, Busy: {self.is_busy}'''
+        Seats for baby {"Yes" if self.is_baby_seat else "No"}, Busy: {"Yes" if self.is_busy else "No"}'''
 
 car1 = Car('red', 4, True)
 print(car1)
+
