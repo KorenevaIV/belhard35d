@@ -7,3 +7,8 @@ cars: list[Car] (список экземпляров класса Car)
 На основании данных, вернуть объект Car из атрибута cars подходящий по параметрам и
 свободный (is_busy = False), у автомобиля сменить атрибут is_busy на значение True, если
 подходящего автомобиля нет, метод должен возвращать None
+class Taxi:
+    def __init__(self, cars: list[Car]) -> None:
+        self.cars = cars
+
+    def find_car(self, count_passengers: int, is_baby: int, ):
