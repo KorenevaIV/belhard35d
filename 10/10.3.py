@@ -25,9 +25,18 @@ class Category:
             cls.categories.append(category_name)
             return cls.categories.index(category_name)
 
+    @classmethod
+    def get(cls, index: int):
+        if cls.categories[index] in cls.categories:
+            return cls.categories[index]
+        else:
+            return ValueError
+
 new_list = Category()
 new_list.add('first')
 new_list.add('second')
 new_list.add('third')
-new_list.add('first')
+
+index1 = new_list.get(0)
+print(index1)
 
