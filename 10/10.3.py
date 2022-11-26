@@ -27,7 +27,7 @@ class Category:
 
     @classmethod
     def get(cls, index: int) -> str:
-        if cls.categories[index] in cls.categories:
+        if index in range(0, len(cls.categories)-1):
             return cls.categories[index]
         else:
             return ValueError
@@ -44,7 +44,7 @@ new_list.add('third')
 new_list.delete(0)
 new_list.add('forth')
 
-index1 = new_list.get(0)
+index1 = new_list.get(5)
 
 print(index1)
 
