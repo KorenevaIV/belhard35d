@@ -26,19 +26,25 @@ class Category:
             return cls.categories.index(category_name)
 
     @classmethod
-    def get(cls, index: int):
+    def get(cls, index: int) -> str:
         if cls.categories[index] in cls.categories:
             return cls.categories[index]
         else:
             return ValueError
 
+    @classmethod
+    def delete(cls, index: int):
+        del cls.categories[index]
+
+
 new_list = Category()
 new_list.add('first')
 new_list.add('second')
 new_list.add('third')
+new_list.delete(0)
 
 index1 = new_list.get(0)
-index2 = new_list.get(5)
+
 print(index1)
-print(index2)
+
 
