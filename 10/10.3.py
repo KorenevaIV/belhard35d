@@ -25,5 +25,9 @@ class Category:
             cls.categories.append(category_name)
             return cls.categories.index(category_name)
 
-
+new_list = Category()
+new_list.add('first')
+new_list.add('second')
+new_list.add('third')
+new_list.add('first')
 
