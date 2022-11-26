@@ -26,7 +26,7 @@ class Category:
             return cls.categories.index(category_name)
 
     @classmethod
-    def get(cls, index: int) -> str:
+    def get(cls, index: int):
         if index in range(0, len(cls.categories)-1):
             return cls.categories[index]
         else:
@@ -36,16 +36,24 @@ class Category:
     def delete(cls, index: int):
         del cls.categories[index]
 
+    # 3.4 Написать метод update принимающий индекс категорий и новое название категории, если
+    # нет элемента на таком индексе, то новая категория должна добавляться с учетом того, что
+    # имена категорий уникальны, если новое имя категории нарушает уникальность в списке
+    # категорий, вызвать исключение ValueError
+
+    @classmethod
+    def update(cls, index, new_name):
+        if index not in range(0, len(cls.categories)-1):
+            if new_name not in cls.categories:
+                return cls.categories.append(new_name)
+            else:
+                raise ValueError
+
 
 new_list = Category()
 new_list.add('first')
 new_list.add('second')
 new_list.add('third')
-new_list.delete(0)
 new_list.add('forth')
-
-index1 = new_list.get(5)
-
-print(index1)
-
-
+new_list.update(4, 'six')
+print(new_list.get(4))
