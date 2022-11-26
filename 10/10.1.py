@@ -17,7 +17,7 @@
 # свободный (is_busy = False), у автомобиля сменить атрибут is_busy на значение True, если
 # подходящего автомобиля нет, метод должен возвращать None
 
-
+from pydantic import BaseModel
 class Car:
 
     def __init__(self, color: str, count_passenger_seats: int, is_baby_seat: bool, is_busy = False) -> None:
@@ -32,15 +32,12 @@ class Car:
         return f'''Color: {self.color}. There are {self.count_passenger_seats} seats. 
         Seats for baby {"Yes" if self.is_baby_seat else "No"}, Busy: {"Yes" if self.is_busy else "No"}'''
 
-class Taxi:
+class Taxi(BaseModel):
     def __init__(self, cars: list[Car]) -> None:
         self.cars = cars
 
     def find_car(self, count_passengers: int, is_baby: bool):
-        for key in self.cars:
-            if self.count_passengers_seats == count_passengers and self.is_baby_seats == is_baby:
-                return list[self.cars]
-            else:
+
                 return self.is_busy = True
 
 
