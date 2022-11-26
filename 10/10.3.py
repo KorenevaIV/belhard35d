@@ -42,6 +42,7 @@ new_list.add('first')
 new_list.add('second')
 new_list.add('third')
 new_list.delete(0)
+new_list.add('forth')
 
 index1 = new_list.get(0)
 
