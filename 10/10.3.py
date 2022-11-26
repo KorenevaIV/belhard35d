@@ -13,21 +13,17 @@
 # нет элемента на таком индексе, то новая категория должна добавляться с учетом того, что
 # имена категорий уникальны, если новое имя категории нарушает уникальность в списке
 # категорий, вызвать исключение ValueError
-class Category(categories):
+class Category:
 
-        categories: list = []
-@classmethod
+    categories: list[str] = []
 
-    def add(cls, categories_name: str):
-        cls.categories_name = categories_name
-        new_list = cls.categories
-        for cls.categories_name in cls.categories:
-            if not cls.categories_name:
-                new_list.append(cls.categories_name)
-                return new_list[cls.categories_name]
-            else:
-                raise ValueError
+    @classmethod
+    def add(cls, category_name: str) -> int:
+        if category_name in cls.categories:
+            raise ValueError
+        else:
+            cls.categories.append(category_name)
+            return cls.categories.index(category_name)
 
 
-list_of_categ = Category(['first', 'second', 'third'])
-list_of_categ.add('forth')
+
