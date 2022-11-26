@@ -38,5 +38,7 @@ new_list.add('second')
 new_list.add('third')
 
 index1 = new_list.get(0)
+index2 = new_list.get(5)
 print(index1)
+print(index2)
 
