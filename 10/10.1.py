@@ -24,7 +24,7 @@ class Car:
 # cars: list[Car] (список экземпляров класса Car)
 class Taxi:
     def __init__(self, cars: list[Car]) -> None:
-        self.cars = cars
+        self.cars: list[Car] = []
 
     # 2.1 Реализовать метод find_car
     # На вход метода поступают атрибуты: count_passengers, is_baby (количество пассажиров,
