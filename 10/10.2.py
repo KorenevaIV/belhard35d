@@ -50,6 +50,21 @@ class Category:
                 raise ValueError
 
 
+# 4. Изменить класс выше, список категорий должен содержать не просто имена категорий, а
+# словари с данными о каждой категории (name: str, is_published: bool)
+# 4.1 Добавить метод make_published принимающий индекс категории и меняющий значение
+# ключа is_published на True, если такого индекса нет, вызвать исключение ValueError
+# 4.2 Добавить метод make_unpublished принимающий индекс категории и меняющий
+# значение ключа is_published на False, если такого индекса нет, вызвать исключение
+# ValueError
+
+class NewCategory(Category):
+
+    def __int__(self):
+
+
+
+
 new_list = Category()
 new_list.add('first')
 new_list.add('second')
