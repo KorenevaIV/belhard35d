@@ -39,3 +39,20 @@ class Category:
             if new_name not in self.categories:
                 return self.categories.append(new_name)
         raise ValueError
+
+# 4. Изменить класс выше, список категорий должен содержать не просто имена категорий, а
+# словари с данными о каждой категории (name: str, is_published: bool)
+class NewCategory(Category):
+    dict_of_category: dict = {}
+    is_published = bool
+
+# 4.1 Добавить метод make_published принимающий индекс категории и меняющий значение
+# ключа is_published на True, если такого индекса нет, вызвать исключение ValueError
+    def make_published(self, index: int)
+        if self.categories[index] in self.categories:
+            self.dict_of_category = dict({'name': self.categories[index], 'is_published': (self.is_published = True)})
+
+
+# 4.2 Добавить метод make_unpublished принимающий индекс категории и меняющий
+# значение ключа is_published на False, если такого индекса нет, вызвать исключение
+# ValueError
