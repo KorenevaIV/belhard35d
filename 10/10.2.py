@@ -19,36 +19,57 @@ class Category:
 
     @classmethod
     def add(cls, category_name: str) -> int:
+        category_name = category_name.title()
         if category_name in cls.categories:
             raise ValueError
-        else:
-            cls.categories.append(category_name)
-            return cls.categories.index(category_name)
+        cls.categories.append(category_name)
+        return cls.categories.index(category_name)
+        # return len(cls.categories) - 1
 
     @classmethod
-    def get(cls, index: int):
-        if index in range(0, len(cls.categories)-1):
+    def get(cls, index: int) -> str:
+    #     if index in range(0, len(cls.categories)-1):
+    #         return cls.categories[index]
+    #     else:
+    #         return ValueError
+        try:
             return cls.categories[index]
-        else:
-            return ValueError
+        except IndexError as (e):
+            raise ValueError(e)
 
     @classmethod
     def delete(cls, index: int):
-        del cls.categories[index]
+        try:
+            del cls.categories[index]
+        except IndexError:
+            pass  # словит ошибку и ничего не выдаст в консоле, ничего не возвращает
 
     # 3.4 Написать метод update принимающий индекс категорий и новое название категории, если
     # нет элемента на таком индексе, то новая категория должна добавляться с учетом того, что
     # имена категорий уникальны, если новое имя категории нарушает уникальность в списке
     # категорий, вызвать исключение ValueError
 
-    @classmethod
-    def update(cls, index, new_name):
-        if index not in range(0, len(cls.categories)-1):
-            if new_name not in cls.categories:
-                return cls.categories.append(new_name)
-            else:
-                raise ValueError
 
+    # @classmethod
+    #     def update(cls, pk: int, new_category_name: str):
+    #         new_category_name = new_category_name.title()
+    #         if new_category_name in cls.categories:
+    #             raise ValueError('category is not unique')
+    #         try:
+    #             cls.get(pk=pk)
+    #         except ValueError:
+    #             cls.add(category=new_category_name)
+    #         else:
+    #             cls.categories[pk] = new_category_name
+    @classmethod
+        def update(cls, pk: int, new_category_name: str):
+            new_category_name = new_category_name.title()
+            if new_category_name in cls.categories:
+                raise ValueError('category is not unique')
+            try:
+                cls.categories[pk] = new_category_name
+            except IndexError:
+                cls.add(category=new_category_name)
 
 # 4. Изменить класс выше, список категорий должен содержать не просто имена категорий, а
 # словари с данными о каждой категории (name: str, is_published: bool)
@@ -58,9 +79,6 @@ class Category:
 # значение ключа is_published на False, если такого индекса нет, вызвать исключение
 # ValueError
 
-class NewCategory(Category):
-
-    def __int__(self):
 
 
 
