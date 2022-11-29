@@ -16,7 +16,7 @@ class Car:
     # 1.1 Написать магический метод __str__ выводящий форматированную строку с информацией
     # об автомобиле
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f'''Color: {self.color}. There are {self.count_passenger_seats} seats. 
         Seats for baby {"Yes" if self.is_baby_seat else "No"}, Busy: {"Yes" if self.is_busy else "No"}'''
 
@@ -24,10 +24,9 @@ class Car:
 # 2. Написать класс Taxi
 # Конструктор класса принимает атрибуты:
 # cars: list[Car] (список экземпляров класса Car)
-class Taxi(Car):
-    def __init__(self, color: str, count_passenger_seats: int, is_baby_seat: bool):
-        super().__init__(color, count_passenger_seats, is_baby_seat)
-        self.cars = list[Car]
+class Taxi:
+    def __init__(self, cars: list[Car]):
+        self.cars = cars
 
     # 2.1 Реализовать метод find_car
     # На вход метода поступают атрибуты: count_passengers, is_baby (количество пассажиров,
@@ -35,13 +34,23 @@ class Taxi(Car):
     # На основании данных, вернуть объект Car из атрибута cars подходящий по параметрам и
     # свободный (is_busy = False), у автомобиля сменить атрибут is_busy на значение True, если
     # подходящего автомобиля нет, метод должен возвращать None
-    def find_car(self, count_passengers: int, is_baby: bool):
-        if count_passengers == self.count_passenger_seats and is_baby == self.is_baby_seat:
-            if self.is_busy is False:
-                self.is_busy = True
-                return self.cars
-            else:
+
+
+def find_car(self, count_passengers: int, is_baby: bool) -> Car | None:
+    for car in self.cars:
+        if not car.is_busy and car.count_passenger_seats >= count_passengers:
+            if is_baby and car.is_baby_seat:
+                car.is_busy = True
+                return car
+            elif is_baby:
                 return None
+            else:
+                car.is_busy = True
+                return car
+
+
+
+
 
 
 
