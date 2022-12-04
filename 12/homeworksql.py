@@ -10,6 +10,12 @@ cur.execute('''
     );
 ''')
 conn.commit()
+# cur.executemany('''
+# INSERT INTO users(name, email)
+# VALUES(?, ?);
+# ''', (('Vasya', 'vasya@gmail.com'), ('Toma', 'toma@gmail.com'), ('Irina', 'Irina@gmail.com')))
+# conn.commit()
+
 cur.execute('''
     CREATE TABLE IF NOT EXISTS statuses(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -17,6 +23,13 @@ cur.execute('''
     );
 ''')
 conn.commit()
+# cur.executemany('''
+# INSERT INTO statuses(name)
+# VALUES(?);
+# ''', ((('OUT OF STOCK', ), ('IN STOCK', ), ('PREORDER', ), ('FOR SALE', ))))
+# conn.commit()
+
+
 cur.execute('''
     CREATE TABLE IF NOT EXISTS orders(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -27,6 +40,8 @@ cur.execute('''
     );
 ''')
 conn.commit()
+
+
 cur.execute('''
     CREATE TABLE IF NOT EXISTS categories(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -34,6 +49,12 @@ cur.execute('''
     );
 ''')
 conn.commit()
+# cur.executemany('''
+# INSERT INTO categories(name)
+# VALUES(?);
+# ''', (('food',),('drinks', ), ('clothes',)))
+# conn.commit()
+
 cur.execute('''
     CREATE TABLE IF NOT EXISTS products(
     id  INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -44,6 +65,10 @@ cur.execute('''
     );
 ''')
 conn.commit()
+cur.executemany('''
+INSERT INTO 
+''')
+
 cur.execute('''
     CREATE TABLE IF NOT EXISTS order_items(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -54,4 +79,6 @@ cur.execute('''
     );
 ''')
 conn.commit()
+
+
 
