@@ -39,12 +39,12 @@ cur.execute('''
     FOREIGN KEY(status_id) REFERENCES statuses(id)
     );
 ''')
-conn.commit()
-cur.executemany('''
-INSERT INTO orders(user_id, status_id)
-VALUES(?, ?);
-''', ((1, 3), (2, 4), (3, 1)))
-conn.commit()
+# conn.commit()
+# cur.executemany('''
+# INSERT INTO orders(user_id, status_id)
+# VALUES(?, ?);
+# ''', ((1, 3), (2, 4), (3, 1)))
+# conn.commit()
 
 cur.execute('''
     CREATE TABLE IF NOT EXISTS categories(
@@ -85,10 +85,11 @@ cur.execute('''
     );
 ''')
 conn.commit()
-# cur.executemany('''
-# INSERT INTO order_items(order_id, product_id)
-# VALUES(?, ?);
-# ''', (()))
+cur.executemany('''
+INSERT INTO order_items(order_id, product_id)
+VALUES(?, ?);
+''', ((1, 2), (2, 1), (3, 3)))
+conn.commit()
 
 
 
