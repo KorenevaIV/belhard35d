@@ -40,7 +40,11 @@ cur.execute('''
     );
 ''')
 conn.commit()
-
+cur.executemany('''
+INSERT INTO orders(user_id, status_id)
+VALUES(?, ?);
+''', ((1, 3), (2, 4), (3, 1)))
+conn.commit()
 
 cur.execute('''
     CREATE TABLE IF NOT EXISTS categories(
@@ -65,9 +69,11 @@ cur.execute('''
     );
 ''')
 conn.commit()
-cur.executemany('''
-INSERT INTO 
-''')
+# cur.executemany('''
+# INSERT INTO products(title, descriptions, category_id)
+# VALUES(?, ?, ?);
+# ''', (('bread', 'from flower', 1), ('water', 'with lemon flavor', 2), ('skirt', 'navy-black', 3)))
+# conn.commit()
 
 cur.execute('''
     CREATE TABLE IF NOT EXISTS order_items(
@@ -79,6 +85,10 @@ cur.execute('''
     );
 ''')
 conn.commit()
+# cur.executemany('''
+# INSERT INTO order_items(order_id, product_id)
+# VALUES(?, ?);
+# ''', (()))
 
 
 
