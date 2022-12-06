@@ -10,11 +10,11 @@ cur.execute('''
     );
 ''')
 conn.commit()
-# cur.executemany('''
-# INSERT INTO users(name, email)
-# VALUES(?, ?);
-# ''', (('Vasya', 'vasya@gmail.com'), ('Toma', 'toma@gmail.com'), ('Irina', 'Irina@gmail.com')))
-# conn.commit()
+cur.executemany('''
+INSERT INTO users(name, email)
+VALUES(?, ?);
+''', (('Vasya', 'vasya@gmail.com'), ('Toma', 'toma@gmail.com'), ('Irina', 'Irina@gmail.com')))
+conn.commit()
 
 cur.execute('''
     CREATE TABLE IF NOT EXISTS statuses(
@@ -23,11 +23,11 @@ cur.execute('''
     );
 ''')
 conn.commit()
-# cur.executemany('''
-# INSERT INTO statuses(name)
-# VALUES(?);
-# ''', ((('OUT OF STOCK', ), ('IN STOCK', ), ('PREORDER', ), ('FOR SALE', ))))
-# conn.commit()
+cur.executemany('''
+INSERT INTO statuses(name)
+VALUES(?);
+''', ((('OUT OF STOCK', ), ('IN STOCK', ), ('PREORDER', ), ('FOR SALE', ))))
+conn.commit()
 
 
 cur.execute('''
@@ -39,12 +39,12 @@ cur.execute('''
     FOREIGN KEY(status_id) REFERENCES statuses(id)
     );
 ''')
-# conn.commit()
-# cur.executemany('''
-# INSERT INTO orders(user_id, status_id)
-# VALUES(?, ?);
-# ''', ((1, 3), (2, 4), (3, 1)))
-# conn.commit()
+conn.commit()
+cur.executemany('''
+INSERT INTO orders(user_id, status_id)
+VALUES(?, ?);
+''', ((1, 3), (2, 4), (3, 1)))
+conn.commit()
 
 cur.execute('''
     CREATE TABLE IF NOT EXISTS categories(
@@ -53,11 +53,11 @@ cur.execute('''
     );
 ''')
 conn.commit()
-# cur.executemany('''
-# INSERT INTO categories(name)
-# VALUES(?);
-# ''', (('food',),('drinks', ), ('clothes',)))
-# conn.commit()
+cur.executemany('''
+INSERT INTO categories(name)
+VALUES(?);
+''', (('food',),('drinks', ), ('clothes',)))
+conn.commit()
 
 cur.execute('''
     CREATE TABLE IF NOT EXISTS products(
@@ -69,11 +69,11 @@ cur.execute('''
     );
 ''')
 conn.commit()
-# cur.executemany('''
-# INSERT INTO products(title, descriptions, category_id)
-# VALUES(?, ?, ?);
-# ''', (('bread', 'from flower', 1), ('water', 'with lemon flavor', 2), ('skirt', 'navy-black', 3)))
-# conn.commit()
+cur.executemany('''
+INSERT INTO products(title, descriptions, category_id)
+VALUES(?, ?, ?);
+''', (('bread', 'from flower', 1), ('water', 'with lemon flavor', 2), ('skirt', 'navy-black', 3)))
+conn.commit()
 
 cur.execute('''
     CREATE TABLE IF NOT EXISTS order_items(
