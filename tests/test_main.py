@@ -8,16 +8,16 @@ from lessons.lesson15 import multiply
 
 import  pytest
 
-
+@pytest.mark.asyncio
 @pytest.mark.parametrize(
     'a, b, c',
     (
-            (4, 2, 7),
+            (4, 2, 8),
             (2, 3, 6),
-            (8, 7, 21),
+            (8, 7, 56),
             (-12,4,-48),
             ('a', 3, 'aaa')
     )
 )
-def test_multiply(a, b, c):
-    assert  multiply(a, b) == c
+async def test_multiply(a, b, c):
+    assert await multiply(a, b) == c
